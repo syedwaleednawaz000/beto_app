@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/route_manager.dart';
 
+import 'HomeScreen/home_screen.dart';
+
 class DashBoard extends StatelessWidget {
   const DashBoard({super.key});
 
@@ -15,7 +17,7 @@ class DashBoard extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
           backgroundColor: Color(0xff009E90),
           onPressed: (){
-            Get.to(()=> ListadoHistory());
+            Get.to(()=> HomeScreen());
           },child: Icon(Icons.add,color: Colors.white,)),
       body: Container(
         height: MediaQuery.of(context).size.height,

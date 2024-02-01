@@ -93,87 +93,90 @@ class _HomeScreen2State extends State<HomeScreen2> {
                 SizedBox(
                   height: 33,
                 ),
-                Container(
-                  width: 360,
-                  height: 32,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(40),
-                      color: Colors.white),
-                  child: Row(
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            selected = 1;
-                          });
-                        },
-                        child: Container(
-                          width: 120,
-                          height: 32,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              color:
-                                  selected == 1 ? Colors.teal : Colors.white),
-                          child: Center(
-                            child: CustomText(
-                                text: 'Ingresos',
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                                color: selected == 1
-                                    ? Colors.white
-                                    : Colors.black),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Container(
+                    // width: 360,
+                    height: 32,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(40),
+                        color: Colors.white),
+                    child: Row(
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              selected = 1;
+                            });
+                          },
+                          child: Container(
+                            width: 120,
+                            height: 32,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color:
+                                    selected == 1 ? Colors.teal : Colors.white),
+                            child: Center(
+                              child: CustomText(
+                                  text: 'Ingresos',
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500,
+                                  color: selected == 1
+                                      ? Colors.white
+                                      : Colors.black),
+                            ),
                           ),
                         ),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            selected = 2;
-                          });
-                        },
-                        child: Container(
-                          width: 120,
-                          height: 32,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              color:
-                                  selected == 2 ? Colors.teal : Colors.white),
-                          child: Center(
-                            child: CustomText(
-                                text: 'Gastos',
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                                color: selected == 2
-                                    ? Colors.white
-                                    : Colors.black),
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              selected = 2;
+                            });
+                          },
+                          child: Container(
+                            width: 120,
+                            height: 32,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color:
+                                    selected == 2 ? Colors.teal : Colors.white),
+                            child: Center(
+                              child: CustomText(
+                                  text: 'Gastos',
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500,
+                                  color: selected == 2
+                                      ? Colors.white
+                                      : Colors.black),
+                            ),
                           ),
                         ),
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            selected = 3;
-                          });
-                        },
-                        child: Container(
-                          width: 120,
-                          height: 32,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              color:
-                                  selected == 3 ? Colors.teal : Colors.white),
-                          child: Center(
-                            child: CustomText(
-                                text: 'Patrimonio',
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                                color: selected == 3
-                                    ? Colors.white
-                                    : Colors.black),
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              selected = 3;
+                            });
+                          },
+                          child: Container(
+                            width: 120,
+                            height: 32,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                color:
+                                    selected == 3 ? Colors.teal : Colors.white),
+                            child: Center(
+                              child: CustomText(
+                                  text: 'Patrimonio',
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500,
+                                  color: selected == 3
+                                      ? Colors.white
+                                      : Colors.black),
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
                 SizedBox(
@@ -316,54 +319,58 @@ class _HomeScreen2State extends State<HomeScreen2> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              Container(
-                                width: 172,
-                                height: 72,
-                                decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(16),
-                                ),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Icon(
-                                      Icons.attach_money,
-                                      color: Colors.black,
-                                      size: 30,
-                                    ),
-                                    CustomText(
-                                      text: 'Ingreso Activo',
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.black,
-                                    ),
-                                  ],
+                              Expanded(
+                                child: Container(
+                                  // width: 172,
+                                  height: 72,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(16),
+                                  ),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      Icon(
+                                        Icons.attach_money,
+                                        color: Colors.black,
+                                        size: 30,
+                                      ),
+                                      CustomText(
+                                        text: 'Ingreso Activo',
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.black,
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
-                              Container(
-                                width: 172,
-                                height: 72,
-                                decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(16),
-                                ),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Icon(
-                                      Icons.trending_up,
-                                      color: Colors.black,
-                                      size: 30,
-                                    ),
-                                    CustomText(
-                                      text: 'Ingreso Pasivo',
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.black,
-                                    ),
-                                  ],
+                              Expanded(
+                                child: Container(
+                                  // width: 172,
+                                  height: 72,
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(16),
+                                  ),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      Icon(
+                                        Icons.trending_up,
+                                        color: Colors.black,
+                                        size: 30,
+                                      ),
+                                      CustomText(
+                                        text: 'Ingreso Pasivo',
+                                        fontSize: 16,
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.black,
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ],
