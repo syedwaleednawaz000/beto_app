@@ -13,6 +13,7 @@ class CustomText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(text,
+      textAlign: TextAlign.center,
       style:TextStyle(
         fontWeight: fontWeight,
         fontSize: fontSize,
